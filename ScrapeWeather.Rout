@@ -54,7 +54,7 @@ The following object(s) are masked from ‘package:lubridate’:
 > 
 > data <- read.csv("/home/susan/Dropbox/Public/AuburnWeather/AuburnWeather.csv", stringsAsFactors=FALSE)
 > data$DateTime <- ymd_hms(data$DateTime)
- 3379 parsed with %Y-%m-%d %H:%M:%S
+ 3380 parsed with %Y-%m-%d %H:%M:%S
 > 
 > data <- rbind.fill(data, tab[which(!tab$DateTime %in%data$DateTime),])
 > 
@@ -68,7 +68,7 @@ The following object(s) are masked from ‘package:lubridate’:
 > 
 > tab$Date <- date-(day(date)-as.numeric(tab$Day))
 > tab$DateTime <- ymd_hm(paste(tab$Date, tab$Time, sep=" "))
- 68 parsed with %Y-%m-%d %H:%M
+ 70 parsed with %Y-%m-%d %H:%M
 > 
 > data <- read.csv("/home/susan/Dropbox/Public/AuburnWeather/SpringTXWeather.csv", stringsAsFactors=FALSE)
 > data$DateTime <- ymd_hms(data$DateTime)
@@ -80,4 +80,4 @@ The following object(s) are masked from ‘package:lubridate’:
 > 
 > proc.time()
    user  system elapsed 
-  2.952   0.212   3.801 
+  3.072   0.208   3.717 
