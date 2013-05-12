@@ -3,6 +3,7 @@ library(XML)
 library(lubridate)
 library(reshape)
 
+setwd("/home/susan/Documents/R Projects/AuburnWeather")
 date <- today()
 
 webpage <- scrape("http://w1.weather.gov/data/obhistory/KAFK.html")
@@ -14,12 +15,12 @@ names(tab) <- c("Day", "Time", "Wind", "Visibility", "Weather", "Sky", "Air.Temp
 tab$Date <- date-ddays((day(date)-as.numeric(tab$Day)))
 tab$DateTime <- ymd_hm(paste(tab$Date, tab$Time, sep=" "))
 
-data <- read.csv("/home/susan/Dropbox/Public/AuburnWeather/AuburnWeather.csv", stringsAsFactors=FALSE)
+data <- read.csv("AuburnWeather.csv", stringsAsFactors=FALSE)
 data$DateTime <- ymd_hms(data$DateTime)
 
 data <- rbind.fill(data, tab[which(!tab$DateTime %in%data$DateTime),])
 
-write.csv(data, "/home/susan/Dropbox/Public/AuburnWeather/AuburnWeather.csv", row.names=FALSE)
+write.csv(data, "AuburnWeather.csv", row.names=FALSE)
 
 webpage <- scrape("http://w1.weather.gov/data/obhistory/KIAH.html")
 
@@ -30,9 +31,9 @@ names(tab) <- c("Day", "Time", "Wind", "Visibility", "Weather", "Sky", "Air.Temp
 tab$Date <- date-(day(date)-as.numeric(tab$Day))
 tab$DateTime <- ymd_hm(paste(tab$Date, tab$Time, sep=" "))
 
-data <- read.csv("/home/susan/Dropbox/Public/AuburnWeather/SpringTXWeather.csv", stringsAsFactors=FALSE)
+data <- read.csv("SpringTXWeather.csv", stringsAsFactors=FALSE)
 data$DateTime <- ymd_hms(data$DateTime)
 
 data <- rbind.fill(data, tab[which(!tab$DateTime %in%data$DateTime),])
 
-write.csv(data, "/home/susan/Dropbox/Public/AuburnWeather/SpringTXWeather.csv", row.names=FALSE)
+write.csv(data, "SpringTXWeather.csv", row.names=FALSE)
