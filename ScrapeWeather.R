@@ -22,6 +22,7 @@ data <- rbind.fill(data, tab[which(!tab$DateTime %in%data$DateTime),])
 
 write.csv(data, "AuburnWeather.csv", row.names=FALSE)
 
+
 webpage <- scrape("http://w1.weather.gov/data/obhistory/KIAH.html")
 
 tab <- readHTMLTable(webpage[[1]], skip.rows=c(1, 2,3), which=4, stringsAsFactors=FALSE)
