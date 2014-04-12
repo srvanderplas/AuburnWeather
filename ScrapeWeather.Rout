@@ -1,5 +1,5 @@
 
-R version 3.1.0 beta (2014-03-28 r65330) -- "Spring Dance"
+R version 3.1.0 (2014-04-10) -- "Spring Dance"
 Copyright (C) 2014 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
@@ -84,4 +84,4 @@ The following object is masked from ‘package:lubridate’:
 > 
 > proc.time()
    user  system elapsed 
-  5.568   0.152   6.674 
+  4.836   0.136   6.864 
