@@ -47,7 +47,7 @@ The following object is masked from ‘package:lubridate’:
 [00:00:04] > tab$DateTime <- ymd_hm(paste(tab$Date, tab$Time, sep=" "))
 [00:00:04] > 
 [00:00:04] > data <- read.csv("AuburnWeather.csv", stringsAsFactors=FALSE)
-[00:00:04] > data$DateTime <- ymd_hms(data$DateTime)
+[00:00:05] > data$DateTime <- ymd_hms(data$DateTime)
 [00:00:05] > 
 [00:00:05] > data <- rbind.fill(data, tab[which(!tab$DateTime %in%data$DateTime),])
 Error: could not find function "rbind.fill"
