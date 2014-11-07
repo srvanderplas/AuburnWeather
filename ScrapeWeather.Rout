@@ -19,7 +19,7 @@ Type 'q()' to quit R.
 
 [Previously saved workspace restored]
 
-[00:00:02] > library(scrapeR)
+[00:00:01] > library(scrapeR)
 Loading required package: XML
 Loading required package: RCurl
 Loading required package: bitops
