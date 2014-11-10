@@ -25,7 +25,7 @@ Loading required package: RCurl
 Loading required package: bitops
 [00:00:02] > library(XML)
 [00:00:02] > library(lubridate)
-[00:00:02] > library(reshape)
+[00:00:03] > library(reshape)
 
 Attaching package: ‘reshape’
 
@@ -33,11 +33,11 @@ The following object is masked from ‘package:lubridate’:
 
     stamp
 
-[00:00:02] > 
-[00:00:02] > setwd("/home/susan/Documents/R Projects/AuburnWeather")
-[00:00:02] > date <- today()
-[00:00:02] > 
-[00:00:02] > webpage <- scrape("http://w1.weather.gov/data/obhistory/KAFK.html")
+[00:00:03] > 
+[00:00:03] > setwd("/home/susan/Documents/R Projects/AuburnWeather")
+[00:00:03] > date <- today()
+[00:00:03] > 
+[00:00:03] > webpage <- scrape("http://w1.weather.gov/data/obhistory/KAFK.html")
 [00:00:03] > 
 [00:00:03] > tab <- readHTMLTable(webpage[[1]], skip.rows=c(1, 2,3), which=4, stringsAsFactors=FALSE)
 [00:00:03] > tab <- tab[-c((nrow(tab)-3):nrow(tab)),]
