@@ -1,7 +1,8 @@
 library(scrapeR)
 library(XML)
 library(lubridate)
-library(reshape)
+library(reshape2)
+library(plyr)
 
 setwd("/home/susan/Documents/R Projects/AuburnWeather")
 date <- today()
