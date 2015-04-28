@@ -73,4 +73,4 @@ The following object is masked from ‘package:lubridate’:
 > 
 > proc.time()
    user  system elapsed 
-  2.798   0.095   3.641 
+  2.829   0.090   3.594 
