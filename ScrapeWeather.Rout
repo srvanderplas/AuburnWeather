@@ -25,6 +25,13 @@ Loading required package: RCurl
 Loading required package: bitops
 > library(XML)
 > library(lubridate)
+
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:base’:
+
+    date
+
 > library(reshape2)
 > library(plyr)
 
@@ -73,4 +80,4 @@ The following object is masked from ‘package:lubridate’:
 > 
 > proc.time()
    user  system elapsed 
-  5.460   0.179   6.066 
+  5.379   0.157   5.836 
